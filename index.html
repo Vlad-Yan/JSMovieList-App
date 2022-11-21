@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>movielist-app</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Список фильмов</h1>
+        <h2>Добавить фильм</h2>
+        <form class="new-movie-form">
+          <input class="new-movie-input"
+            type="text" 
+            name="title" 
+            id="new-movie-title-input" 
+            placeholder="Введите название фильма" />
+          <input class="new-movie-input"
+            type="text" 
+            name="new-movie-genre-input" 
+            id="genre" 
+            placeholder="Введите жанр фильма" />
+          <input class="new-movie-input"
+            type="text" 
+            name="new-movie-img-input" 
+            id="url" 
+            placeholder="Введите URL обложки фильма" />
+          <input class="new-movie-submit"
+            type="submit"
+            id="new-movie-submit" 
+            value="Добавить фильм" />
+        </form>
+      </header>
+    
+    <main>
+        <section class="movie-list">
+            <h2>Фильмы</h2>
+          <div class="btnFavorit-container">
+            <div class="btnFavorit active">Все</div>
+            <div class="btnFavorit">Избранные</div>
+          </div>
+            <div class="movies">
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+      © 2022 Vlad_Yan
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
