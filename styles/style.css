@@ -40,17 +40,6 @@ img:hover {
   cursor: pointer;
 }
 
-select {
-	margin-bottom: 1rem;
-	height: 30px;
-	border: 1px solid #999;
-	font-size: 18px;
-	color: #1c87c9;
-	background-color: #eee;
-	border-radius: 5px;
-	box-shadow: 2px 2px 3px #ccc;
-	
-}
 header {
 	padding: 1rem 1rem;
 	max-width: 800px;

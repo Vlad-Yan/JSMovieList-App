@@ -34,7 +34,7 @@ window.addEventListener('DOMContentLoaded', () => {
         },
         {
             title: 'Гладиатор',
-            genre: 'История',
+            genre: 'Боевик',
             url: 'https://avatars.mds.yandex.net/get-kinopoisk-image/1599028/7c3460dc-344d-433f-8220-f18d86c8397d/300x450',
             favorite: 'false'
         },
@@ -42,6 +42,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     getMovies(exampleMovies);
     favoritesMovies();
+    filterMovies();
 });
 
 const NAME_LOCALSTORAGE = 'movies';
