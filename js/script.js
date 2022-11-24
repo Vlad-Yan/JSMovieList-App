@@ -48,6 +48,7 @@ const NAME_LOCALSTORAGE = 'movies';
 let MODAL_INDEX = document.querySelector('.index');
 const MODAL_TITLE = document.querySelector('#exampleModalLabel');
 const MODAL_SUBMIT = document.querySelector('#new-movie-submit');
+const HTTP_REGEX = /^https?:\/\/(?:www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b(?:[-a-zA-Z0-9()@:%_\+.~#?&\/=]*)$/;
 
 
 function getMovies (exampleMovies) {
@@ -68,13 +69,14 @@ function addMovie (data) {
         url: data.elements.url.value,
         favorite: false
     }
-    if (!movie.title || !movie.genre || !movie.url) {
-        alert("Заполните все поля!");
-    }
 
     if (index === "-1") {
-      if(movies.find(m => m.title === movie.title)) {
-            alert("Такой фильм уже добавлен!");
+        if (!movie.title || !movie.genre || !movie.url) {
+            alert("Заполните все поля!");
+        } else if(!HTTP_REGEX.test(movie.url)) {
+            alert("Не верный url!");
+        } else if(movies.find(m => m.title === movie.title)) {
+            alert("Такой фильм уже создан!");
         } else {
             movies.push(movie);
             localStorage.setItem(NAME_LOCALSTORAGE, JSON.stringify(movies));
@@ -85,7 +87,11 @@ function addMovie (data) {
 
     } else {
         movie.favorite = movies[index].favorite;
-        if(movies.find(m => m.title === movie.title) && movies[index].title !== movie.title) {
+        if (!movie.title || !movie.genre || !movie.url) {
+            alert("Заполните все поля!");
+        } else if(!HTTP_REGEX.test(movie.url)) {
+            alert("Не верный url!");
+        } else if(movies.find(m => m.title === movie.title) && movies[index].title !== movie.title) {
             alert("Такой фильм уже создан!");
         } else {
             movies[index] = movie;
