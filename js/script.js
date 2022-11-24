@@ -124,9 +124,9 @@ function showMovies(data) {
             <img src="${movie.url}" alt="movie">
             <div class="movie-description">
                 <p>Название фильма:</p>
-                <p class="title">${movie.title}</p>
+                <p id="title" class="info">${movie.title}</p>
                 <p>Жанр:</p>
-                <p>${movie.genre}</p>
+                <p class="info">${movie.genre}</p>
             </div>
             </div>
             <div class="actions">
@@ -155,8 +155,7 @@ function favoritesMovies() {
         let movies = JSON.parse(localStorage.getItem(NAME_LOCALSTORAGE));
 
         if (e.target.dataset.action === 'favorit'){
-            let title = e.target.closest('.movie').querySelector('.title');
-            console.log(e.target.closest('.movie'))
+            let title = e.target.closest('.movie').querySelector('#title');
 
             let index = movies.findIndex(movie => movie.title === title.textContent)
 
@@ -219,7 +218,7 @@ function modalEdit(title, genre, url) {
     MODAL_SUBMIT.value = "Изменить фильм";
 
     let titleInput = document.querySelector('#title-input');
-    let genreSelect = document.querySelector('#genre');
+    let genreSelect = document.querySelector('#genre-select');
     let urlInput = document.querySelector('#url-input');
 
     titleInput.value = title;

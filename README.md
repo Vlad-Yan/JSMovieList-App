@@ -14,8 +14,8 @@ Functional:
 
 ### Screenshots
 ![image](https://user-images.githubusercontent.com/93535054/203711927-b504b0fc-4ceb-482b-a4f1-a7cc87693418.png)
-![image](https://user-images.githubusercontent.com/93535054/203712073-fca2534a-b628-482d-8002-33c1db3b282f.png)
-![image](https://user-images.githubusercontent.com/93535054/203714714-bc6f3fab-0b02-4ceb-b4b3-18db253f0a2e.png)
+![image](https://user-images.githubusercontent.com/93535054/203717535-917a5bd3-b739-46ca-b134-0f00ec86e873.png)
+![image](https://user-images.githubusercontent.com/93535054/203717613-2d424d86-209f-4076-bff8-a226d59d4298.png)
 ![image](https://user-images.githubusercontent.com/93535054/203048376-c832b8c4-6f7f-499b-807d-2cec6f9221f0.png)
 
 ***

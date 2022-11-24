@@ -27,11 +27,16 @@
               name="title" 
               id="title-input" 
               placeholder="Введите название фильма" />
-            <input class="new-movie-input"
-              type="text" 
-              name="new-movie-genre-input" 
-              id="genre" 
-              placeholder="Введите жанр фильма" />
+            <select id="genre-select" name="genre" class="select-genre" aria-label="Default select example">
+              <option value = "" selected>Выберите жанр фильма</option>
+              <option value="Боевик">Боевик</option>
+              <option value="Драма">Драма</option>
+              <option value="Комедия">Комедия</option>
+              <option value="Мультфильм">Мультфильм</option>
+              <option value="Приключение">Приключения</option>
+              <option value="Ужасы">Ужасы</option>
+              <option value="Фантастика">Фантастика</option>
+            </select>
             <input class="new-movie-input"
               type="text" 
               name="url" 
